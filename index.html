@@ -63,10 +63,20 @@
                     computerScore += 1;
                 }
             }
+
             // repeating the round 5 times
             for (i = 0; i <= 4; i++) {
-                // console.log('yes')
-                playRound(getHumanChoice(), getComputerChoice())
+                console.log(`round ${i + 1}`)
+                const humanChoice = getHumanChoice();
+                const computerChoice = getComputerChoice();
+                playRound(humanChoice, computerChoice);
+                // reveal answers
+                console.log(`the choices :the human choice was:${humanChoice} while computer one was ${computerChoice}`);
+                // declare the current score
+                console.log(`score after round ${i + 1}: human:${humanScore}, computer = ${computerScore}`);
+                // make a breaker between rounds
+                console.log('---------------------------------------');
+
             }
 
             // output the winner
@@ -80,7 +90,7 @@
                 console.log('computer wins!');
             }
         }
-
+        // start the game
         playGame();
 
     </script>
